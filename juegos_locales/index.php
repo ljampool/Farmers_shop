@@ -22,7 +22,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farmers Shop</title>
+    <title>Farmer Shop</title>
 
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -35,7 +35,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
         <div class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container" style="display: flex; justify-content: center;">
                 <a href="../index.php" class="navbar-brand">
-                <h1>Farmers Shop</h1> 
+                <h1>Farmer Shop</h1> 
                 </a>
                 <?php require 'php-login/index.php' ?>
 
@@ -59,7 +59,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 <?php foreach ($resultado as $row) { ?>
                     <div class="col">
-                        <div class="card shadow-sm" style="height: 100%;">
+                        <div class="card shadow-sm" style="height: auto;">
                             <?php
 
                             $id = $row['id'];
@@ -70,7 +70,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                             }
 
                             ?>
-                            <img src="<?php echo $imagen; ?>" class="d-block w-100" style="height: 100%; width: 100%;">
+                            <img src="<?php echo $imagen; ?>" style="height: 280px; width: auto; object-fit: contain">
                             <div class="card-body">
                                 <h5 class="card-title"><?php echo $row['nombre']; ?></h5>
                                 <p class="card-text">$ <?php echo number_format($row['precio'], 2, '.', ','); ?></p>

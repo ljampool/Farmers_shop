@@ -46,7 +46,7 @@ if(isset($_GET['id']) && is_numeric($_GET['id'])){
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Farmers Shop</title>
+    <title>Farmer Shop</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -66,7 +66,7 @@ if(isset($_GET['id']) && is_numeric($_GET['id'])){
             <span class="icon-bar"></span>
           </button>
             <a class="navbar-brand" href="index.php">
-                Farmers Shop
+                Farmer Shop
             </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">

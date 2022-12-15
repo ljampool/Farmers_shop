@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Farmers shop</title>
+    <title>Farmer shop</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="../assets/css/estilos.css">
   </head>
 
-  <body style="background: url(granja.jpg); background-size: 100% 120%; background-repeat: no-repeat; margin: 0; padding: 0;">
+  <body style="background: url(granja.jpg); background-size: 100% 100%; background-repeat: no-repeat; margin: 0; padding: 0; min-height: 100vh;">
 
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -31,7 +31,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="../index.php">
-            Farmers Shop 
+            Farmer Shop 
           </a>
         </div>
        

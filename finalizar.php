@@ -13,7 +13,7 @@ require 'funciones.php';
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Gamer_XD</title>
+    <title>Farmer shop</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -33,7 +33,7 @@ require 'funciones.php';
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="index.php">
-            Farmers Shop
+            Farmer Shop
           </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
@@ -70,7 +70,7 @@ require 'funciones.php';
                                     <input type="text" class="form-control" name="telefono" required>
                                 </div>
                                 <div class="form-group">
-                                    <label>Comentario</label>
+                                    <label>Dirección</label>
                                     <textarea name="comentario" class="form-control"  rows="4"></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-block">Enviar</button>

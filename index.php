@@ -1,4 +1,5 @@
 <?php
+// var_dump(session_start());
 // session_start();
 require 'funciones.php';
 
@@ -15,7 +16,7 @@ require 'funciones.php';
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Farmers Shop</title>
+  <title>Farmer Shop</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
@@ -30,7 +31,7 @@ require 'funciones.php';
 </head>
 
 		
-<body style="background: url(granja.jpg); background-size: 100% 100%; background-repeat: no-repeat; margin: 0; padding: 0;">
+<body style="background: url(granja.jpg); background-size: 100% 100%; background-repeat: no-repeat; margin: 0; padding: 0; min-height: 100vh;">
 
   <!-- <header class="header"> -->
     <!-- Fixed navbar -->
@@ -42,7 +43,7 @@ require 'funciones.php';
             <label for="btn-menu" style="padding: -10px 0 0 0;">☰</label>
           </div> -->
           <a href="panel/index.php">
-            Farmers Shop
+            Farmer Shop
           </a>
         </div>
         <nav class="menu"><?php require 'php-login/index.php' ?>
@@ -56,7 +57,7 @@ require 'funciones.php';
           <a href="php-login/login.php">Login</a>
           <a href="php-login/signup.php">SignUp</a>
         <?php endif; ?>
-        <a href="juegos_locales/index.php"><i class='fas fa-store'></i>Tiendas asociadas</a>
+        <a href="juegos_locales/index.php"><i class='fas fa-store'></i> Tiendas asociadas</a>
           <a href="contacto/index.html">Contacto</a>
           <a href="carrito.php" class="btn" style="margin: 12px; color: white;">Carrito <span class="badge"><?php print cantidadPeliculas(); ?></span></a>
         </nav>
@@ -85,12 +86,12 @@ require 'funciones.php';
     <div class="conteCarrousel">
 
       <div class="itemCarrousel" id="itemCarrousel-1">
-        <p class="carusel"><span class="pala">Popular</span></p>
+        <p class="carusel"><span class="pala">Tractor</span></p>
         <div class="itemCarrouselArrows">
           <a href="#itemCarrousel-3">
             <i class="fas fa-chevron-left" style="color: white;"></i>
           </a>
-          <img src="img/tractor1.jpg" onmouseover="this.src='img/tractor4.jpg'" onmouseout="this.src='img/tractor3.jpg'" width="100%" height="100%">
+          <img class="image" src="img/tractor1.jpg" onmouseover="this.src='img/tractor2.jpg'" onmouseout="this.src='img/tractor3.jpg'" style="width: 100%; height: 100%; object-fit: contain; object-position: center">
           <a href="#itemCarrousel-2">
             <i class="fas fa-chevron-right" style="color: white;"></i>
           </a>
@@ -98,12 +99,12 @@ require 'funciones.php';
       </div>
 
       <div class="itemCarrousel" id="itemCarrousel-2">
-        <p class="carusel"><span class="pala">Nuevo</span></p>
+        <p class="carusel"><span class="pala">Segadora</span></p>
         <div class="itemCarrouselArrows">
           <a href="#itemCarrousel-1">
             <i class="fas fa-chevron-left" style="color: white;"></i>
           </a>
-          <img src="img/camion1.jpg" onmouseover="this.src='img/camion2.jpg'" onmouseout="this.src='img/camion3.jpg'" width="100%" height="100%">
+          <img class="image" src="img/segadora1.jpg" onmouseover="this.src='img/segadora2.jpg'" onmouseout="this.src='img/segadora3.jpg'" style="width: 100%; height: 100%; object-fit: contain; object-position: center">
           <a href="#itemCarrousel-3">
             <i class="fas fa-chevron-right" style="color: white;"></i>
           </a>
@@ -111,12 +112,12 @@ require 'funciones.php';
       </div>
 
       <div class="itemCarrousel" id="itemCarrousel-3">
-        <p class="carusel"><span class="pala">Recomendado</span></p>
+        <p class="carusel"><span class="pala">Cosechadora</span></p>
         <div class="itemCarrouselArrows">
           <a href="#itemCarrousel-2">
             <i class="fas fa-chevron-left" style="color: white;"></i>
           </a>
-          <img src="img/gallinero.jpg" onmouseover="this.src='img/gallinero3.jpg'" onmouseout="this.src='img/gallinero2.jpg'" width="100%" height="100%">
+          <img class="image" src="img/cosechadora1.jpg" onmouseover="this.src='img/cosechadora2.jpg'" onmouseout="this.src='img/cosechadora3.jpg'" style="width: 100%; height: 100%; object-fit: contain; object-position: center">
           <a href="#itemCarrousel-1">
             <i class="fas fa-chevron-right" style="color: white;"></i>
           </a>
@@ -146,9 +147,11 @@ require 'funciones.php';
           for ($x = 0; $x < $cantidad; $x++) {
             $item = $info_peliculas[$x];
         ?>
-            <div class="col">
 
-              <div class="card shadow-sm" style="height: 100%;">
+        <!-- <div style="height: 50%;"> -->
+            <div class="col" >
+
+              <div class="card shadow-sm" style="height: 100%; flex: 1;">
                 <!-- <div class="col-md-3" style="height: 100%;">
                 <div class="panel panel-default"> -->
                 <div class="panel-body" style="height: 100%;">
@@ -156,9 +159,9 @@ require 'funciones.php';
                   $foto = 'upload/' . $item['foto'];
                   if (file_exists($foto)) {
                   ?>
-                    <img src="<?php print $foto; ?>" class="img-responsive" style="height: 100%;">
+                    <img src="<?php print $foto; ?>" class="img-responsive" style="height: auto;">
                   <?php } else { ?>
-                    <img src="assets/imagenes/not-found.jpg" class="img-responsive" style="height: 100%;">
+                    <img src="assets/imagenes/not-found.jpg" class="img-responsive" style="height: auto;">
                   <?php } ?>
                 </div>
                 <div class="panel-heading">
@@ -176,6 +179,7 @@ require 'funciones.php';
 
 
             </div>
+          <!-- </div> -->
           <?php
           }
         } else { ?>

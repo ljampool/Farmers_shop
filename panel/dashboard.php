@@ -16,7 +16,7 @@ if(!isset($_SESSION['usuario_info']) OR empty($_SESSION['usuario_info']))
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Farmers Shop</title>
+    <title>Farmer Shop</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
@@ -35,7 +35,7 @@ if(!isset($_SESSION['usuario_info']) OR empty($_SESSION['usuario_info']))
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">Farmers Shop</a>
+          <a class="navbar-brand" href="index.php">Farmer Shop</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav pull-right">

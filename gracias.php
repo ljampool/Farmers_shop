@@ -13,7 +13,7 @@ require 'funciones.php';
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Farmers shop</title>
+    <title>Farmer shop</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -33,7 +33,7 @@ require 'funciones.php';
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="index.php">
-            Farmers Shop
+            Farmer Shop
           </a>
         </div>
         
